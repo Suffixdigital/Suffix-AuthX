@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            tools:context=".ui.VerifyEmailScreen">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleX="2.5"
+                android:scaleY="2.5"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@mipmap/suffix_digital_icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_medium"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Smart Authenticator"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp" />
+
+
+            <!-- Main content -->
+            <TextView
+                android:id="@+id/btn_already_verified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/already_verified"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/blue_5bd0d8"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_60sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/spam_email"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/blue_5bd0d8"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/Login_MaterialTextView"
+                    android:text="Exit? " />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btn_back"
+                    style="@style/Login_MaterialTextView"
+                    android:text="@string/btn_register"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading_process"
+            layout="@layout/circular_progressbar_layout" />
+
+
+    </FrameLayout>
+
+</layout>
