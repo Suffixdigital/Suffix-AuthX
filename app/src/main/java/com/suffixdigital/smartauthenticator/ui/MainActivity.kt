@@ -15,10 +15,15 @@ import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.FacebookSdk
+import com.facebook.LoginStatusCallback
+import com.facebook.login.LoginBehavior
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
-import com.google.android.gms.auth.api.signin.*
-import com.google.android.gms.auth.api.signin.GoogleSignIn.*
+import com.facebook.login.widget.LoginButton
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignIn.getSignedInAccountFromIntent
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -124,15 +129,19 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
 
     private fun handleFacebookAccessToken(token: AccessToken) {
         val credential = FacebookAuthProvider.getCredential(token.token)
-        firebaseAuth.signInWithCredential(credential).addOnCompleteListener(this) { task ->
-            if (task.isSuccessful) {
-                val user = firebaseAuth.currentUser
-                binding.txtFacebook.text = getString(R.string.lbl_logout)
-                showToast("FacebookLogin", getString(R.string.lbl_welcome_user, user?.displayName))
-            } else {
-                showToast("FacebookLogin", "Firebase auth failed: ${task.exception?.message}")
+        firebaseAuth.signInWithCredential(credential)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = firebaseAuth.currentUser
+                    binding.txtFacebook.text = getString(R.string.lbl_logout)
+                    showToast(
+                        "FacebookLogin",
+                        getString(R.string.lbl_welcome_user, user?.displayName)
+                    )
+                } else {
+                    showToast("FacebookLogin", "Firebase auth failed: ${task.exception?.message}")
+                }
             }
-        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -150,7 +159,7 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
             pending.addOnSuccessListener { result ->
                 val user = result.user
                 binding.txtTwitter.text = getString(R.string.lbl_logout)
-                showToast("TwitterLogin",getString(R.string.lbl_welcome_user, user?.displayName))
+                showToast("TwitterLogin", getString(R.string.lbl_welcome_user, user?.displayName))
             }.addOnFailureListener { e ->
                 showToast("TwitterLogin", "Pending error: ${e.message}")
             }
@@ -160,7 +169,10 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
                 .addOnSuccessListener { result ->
                     val user = result.user
                     binding.txtTwitter.text = getString(R.string.lbl_logout)
-                    showToast("TwitterLogin", getString(R.string.lbl_welcome_user, user?.displayName))
+                    showToast(
+                        "TwitterLogin",
+                        getString(R.string.lbl_welcome_user, user?.displayName)
+                    )
                 }.addOnFailureListener { e ->
                     showToast("TwitterLogin", "Sign in failed: ${e.message}")
                 }
@@ -185,7 +197,10 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
                 .addOnSuccessListener { result ->
                     val user = result.user
                     binding.txtGithub.text = getString(R.string.lbl_logout)
-                    showToast("GithubLogin", getString(R.string.lbl_welcome_user, user?.displayName))
+                    showToast(
+                        "GithubLogin",
+                        getString(R.string.lbl_welcome_user, user?.displayName)
+                    )
                 }.addOnFailureListener { e ->
                     showToast("GithubLogin", "Sign in failed: ${e.message}")
                 }
@@ -211,7 +226,7 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
                     binding.txtYahoo.text = getString(R.string.lbl_logout)
                     showToast("YahooLogin", getString(R.string.lbl_welcome_user, user?.displayName))
                 }.addOnFailureListener { e ->
-                    showToast("YahooLogin","Sign in failed: ${e.message}")
+                    showToast("YahooLogin", "Sign in failed: ${e.message}")
                 }
         }
 
@@ -233,7 +248,10 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
                 .addOnSuccessListener { result ->
                     val user = result.user
                     binding.txtMicrosoft.text = getString(R.string.lbl_logout)
-                    showToast("MicrosoftLogin", getString(R.string.lbl_welcome_user, user?.displayName))
+                    showToast(
+                        "MicrosoftLogin",
+                        getString(R.string.lbl_welcome_user, user?.displayName)
+                    )
                 }.addOnFailureListener { e ->
                     showToast("MicrosoftLogin", "Sign in failed: ${e.message}")
                 }
@@ -278,13 +296,18 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_google -> {
-                if (binding.txtGoogle.text.toString().equals(getString(R.string.lbl_sign_in_with_google), true)) {
+                if (binding.txtGoogle.text.toString()
+                        .equals(getString(R.string.lbl_sign_in_with_google), true)
+                ) {
                     signInWithGoogle()
                 } else {
                     firebaseAuth.signOut()
                     googleSignInClient.signOut()
                         .addOnCompleteListener(this, OnCompleteListener { task: Task<Void?>? ->
-                            showToast("GoogleSignIn", getString(R.string.lbl_logged_out_successfully))
+                            showToast(
+                                "GoogleSignIn",
+                                getString(R.string.lbl_logged_out_successfully)
+                            )
                             binding.txtGoogle.text = getString(R.string.lbl_sign_in_with_google)
                         })
                 }
@@ -292,8 +315,13 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_facebook -> {
-                if (binding.txtFacebook.text.toString().equals(getString(R.string.lbl_sign_in_with_facebook), true)) {
-                    loginManager.logInWithReadPermissions(this, listOf("email", "public_profile"))
+                if (binding.txtFacebook.text.toString()
+                        .equals(getString(R.string.lbl_sign_in_with_facebook), true)
+                ) {
+                    loginManager.logInWithReadPermissions(
+                        this,
+                        listOf("email", "public_profile")
+                    )
 
                     loginManager.registerCallback(
                         callbackManager, object : FacebookCallback<LoginResult> {
@@ -306,12 +334,15 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
                             }
 
                             override fun onError(error: FacebookException) {
-                                showToast("FacebookLogin", "Facebook login failed: ${error.message}")
+                                showToast(
+                                    "FacebookLogin",
+                                    "Facebook login failed: ${error.message}"
+                                )
                             }
                         })
                 } else {
-                    firebaseAuth.signOut()
                     loginManager.logOut()
+                    firebaseAuth.signOut()
                     showToast("FacebookLogin", getString(R.string.lbl_logged_out_successfully))
                     binding.txtFacebook.text = getString(R.string.lbl_sign_in_with_facebook)
                 }
@@ -319,7 +350,9 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_twitter -> {
-                if (binding.txtTwitter.text.toString().equals(getString(R.string.lbl_sign_in_with_twitter), true)) {
+                if (binding.txtTwitter.text.toString()
+                        .equals(getString(R.string.lbl_sign_in_with_twitter), true)
+                ) {
                     signInWithTwitter()
                 } else {
                     firebaseAuth.signOut()
@@ -331,7 +364,9 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_github -> {
-                if (binding.txtGithub.text.toString().equals(getString(R.string.lbl_sign_in_with_github), true)) {
+                if (binding.txtGithub.text.toString()
+                        .equals(getString(R.string.lbl_sign_in_with_github), true)
+                ) {
                     signInWithGithub()
                 } else {
                     firebaseAuth.signOut()
@@ -343,7 +378,9 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_yahoo -> {
-                if (binding.txtYahoo.text.toString().equals(getString(R.string.lbl_sign_in_with_yahoo), true)) {
+                if (binding.txtYahoo.text.toString()
+                        .equals(getString(R.string.lbl_sign_in_with_yahoo), true)
+                ) {
                     signInWithYahoo()
                 } else {
                     firebaseAuth.signOut()
@@ -355,7 +392,9 @@ class MainActivity() : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_microsoft -> {
-                if (binding.txtMicrosoft.text.toString().equals(getString(R.string.lbl_sign_in_with_microsoft), true)) {
+                if (binding.txtMicrosoft.text.toString()
+                        .equals(getString(R.string.lbl_sign_in_with_microsoft), true)
+                ) {
                     signInWithMicrosoft()
                 } else {
                     firebaseAuth.signOut()

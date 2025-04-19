@@ -47,11 +47,11 @@
     <string name="reset_password_message">We\'ve sent you an email with a link to reset the password.</string>"
 
     <string name="default_web_client_id">776521156581-utb63hi3s4cj50kej8ngvg073aal69qe.apps.googleusercontent.com</string>
-    <string name="facebook_app_id">1028202185856039</string>
+    <string name="facebook_app_id">1609442172930055</string>
 
     <!--<string name="facebook_app_id">1234</string>-->
-    <string name="fb_login_protocol_scheme">fb1234</string>
-    <string name="facebook_client_token">2fb14166fb696ac6d389f715bda1d5c6</string>
+    <string name="fb_login_protocol_scheme">fb1609442172930055</string>
+    <string name="facebook_client_token">2faf7bf68306a593072a7558123023b6</string>
 
     <string name="twitter_consumer_key">exWbVvtL6qEOrCSJoICbDvitF</string>
     <string name="twitter_consumer_secret">sQkRcYnBZDi3ln5WBnUjEwXdgM7GQarWNxgVzrmKNCo8yfmH6G</string>

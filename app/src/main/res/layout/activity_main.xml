@@ -131,8 +131,7 @@
                         android:textSize="@dimen/_14ssp" />
                 </LinearLayout>
 
-                <!-- Sign in with Facebook -->
-                <LinearLayout
+                <!--<LinearLayout
                     android:id="@+id/btn_facebook"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -140,23 +139,52 @@
                     android:background="@drawable/bg_google_button"
                     android:backgroundTint="@color/fui_bgFacebook"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/_12sdp">
+                    android:orientation="horizontal">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/_24sdp"
-                        android:layout_height="@dimen/_24sdp"
-                        android:src="@drawable/ic_facebook" />
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_facebook"
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/button_facebook_login"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_12sdp"
-                        android:text="@string/lbl_sign_in_with_facebook"
-                        android:textColor="#FFFFFF"
-                        android:textSize="@dimen/_14ssp" />
-                </LinearLayout>
+                        android:layout_gravity="center"
+                        android:minHeight="@dimen/_24sdp"
+                        android:minWidth="@dimen/_24sdp"
+                        android:height="@dimen/_24sdp"
+                        android:width="@dimen/_24sdp"
+                        android:layout_margin="@dimen/_12sdp"
+                        android:backgroundTint="@color/fui_bgFacebook"
+                        android:gravity="center"
+                        app:com_facebook_login_text="@string/lbl_sign_in_with_facebook"
+                        app:com_facebook_logout_text="@string/lbl_logout" />
+
+                </LinearLayout>-->
+
+                <!-- Sign in with Facebook -->
+                 <LinearLayout
+                     android:id="@+id/btn_facebook"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="@dimen/_15sdp"
+                     android:background="@drawable/bg_google_button"
+                     android:backgroundTint="@color/fui_bgFacebook"
+                     android:gravity="center_vertical"
+                     android:orientation="horizontal"
+                     android:padding="@dimen/_12sdp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="@dimen/_24sdp"
+                         android:layout_height="@dimen/_24sdp"
+                         android:src="@drawable/ic_facebook" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:id="@+id/txt_facebook"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="@dimen/_12sdp"
+                         android:text="@string/lbl_sign_in_with_facebook"
+                         android:textColor="#FFFFFF"
+                         android:textSize="@dimen/_14ssp" />
+                 </LinearLayout>
 
 
                 <!-- Twitter Login -->
