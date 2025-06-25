@@ -104,8 +104,6 @@ com.suffixdigital.smartauthenticator/
 ### 🙍‍♂️ User Profile
 ![Profile](https://raw.githubusercontent.com/Suffixdigital/Smart-Authenticator/main/screenshots/profile_screen.png)
 
-> ⚠️ Make sure you upload the images to `screenshots/` folder in your GitHub repo.
-
 ---
 
 ## 🧪 Testing
@@ -114,20 +112,6 @@ com.suffixdigital.smartauthenticator/
 - 🔄 Auto session resume
 - ⚠️ Network disconnection test
 - ❌ Incorrect credentials feedback
-
----
-
-## 🔒 Security Considerations
-
-- 🔐 Don’t hardcode secrets in source code
-- 🧱 Enable App Check (for phone auth)
-- ⛔️ Add brute-force protection or rate limiting
-
----
-
-## 🙌 Contributions
-
-Pull requests and suggestions are welcome!
 
 ---
 
