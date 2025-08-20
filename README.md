@@ -95,14 +95,15 @@ com.suffixdigital.smartauthenticator/
 
 ## 🖼 Screenshots
 
-### 📱 Login Screen
-![Login](https://raw.githubusercontent.com/Suffixdigital/Smart-Authenticator/main/screenshots/login_screen.png)
+| Main Screen                                 | Phone Number Screen                         | OTP Verification Screen                     | Email-Password Login Screen                 |
+|---------------------------------------------|---------------------------------------------|---------------------------------------------|---------------------------------------------|
+| ![Main Screen](screenshots/main_screen.png)| ![Phone](screenshots/phone_number_screen.png)| ![OTP](screenshots/otp_screen.png)| ![Login](screenshots/login_screen.png)|
 
-### 🔐 OTP Verification
-![OTP](https://raw.githubusercontent.com/Suffixdigital/Smart-Authenticator/main/screenshots/otp_screen.png)
 
-### 🙍‍♂️ User Profile
-![Profile](https://raw.githubusercontent.com/Suffixdigital/Smart-Authenticator/main/screenshots/profile_screen.png)
+
+| Registration Screen                         | Forgot Password Screen                      | Facebook Login Screen                       | Facebook Login Success Screen               |
+|---------------------------------------------|---------------------------------------------|---------------------------------------------|---------------------------------------------|
+| ![Registration](screenshots/registration_screen.png)| ![Forgot Password](screenshots/forgot_password.png)| ![Facebook Login](screenshots/facebook_login_screen.png)| ![Facebook Login Success](screenshots/facebook_login_success.png)|
 
 ---
 
