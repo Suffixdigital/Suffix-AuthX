@@ -44,7 +44,6 @@ android {
     }
 
 
-    buildToolsVersion = "36.0.0"
 }
 
 dependencies {
@@ -63,14 +62,13 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation (libs.androidx.lifecycle.viewmodel.ktx) // or the latest version
 
-    implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
+    implementation(platform(libs.firebase.bom))
 
-    implementation("com.google.firebase:firebase-analytics")
-    implementation ("com.google.firebase:firebase-auth-ktx")
+    implementation(libs.google.firebase.analytics)
+    implementation (libs.google.firebase.authentication)
 
     //	Google Auth
-    implementation ("com.google.android.gms:play-services-auth:21.3.0")
-    implementation ("com.google.android.gms:play-services-auth-api-phone:18.2.0")
+    implementation (libs.play.services.auth.api.phone)
 
     implementation (libs.firebase.ui.auth)
     implementation (libs.gms.play.services.auth)

@@ -1,227 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:background="@color/white"
-    android:layout_height="match_parent"
-    tools:context=".ui.OtpVerifyActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="70dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/password" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gradient"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Verify OTP"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_10ssp"
-            android:text="Enter your received OTP here"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:backgroundTint="@android:color/transparent"
+                android:scaleX="2.8"
+                android:scaleY="2.8"
+                android:src="@drawable/suffix_digital_icon_foreground" />
 
-        <TextView
-            android:id="@+id/tvMobile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="+91-1234567890"
-            android:textSize="@dimen/_10ssp"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_2sdp"
+                app:cardUseCompatPadding="true">
 
-        <EditText
-            android:id="@+id/etC1"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginEnd="3dp"
-            android:background="@drawable/border"
-            android:ems="1"
-            android:gravity="center"
-            android:inputType="phone"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15ssp"
-            app:layout_constraintEnd_toStartOf="@+id/etC2"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvMobile" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_15sdp">
 
-        <EditText
-            android:id="@+id/etC2"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="3dp"
-            android:background="@drawable/border"
-            android:ems="1"
-            android:gravity="center"
-            android:inputType="phone"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/etC1"
-            app:layout_constraintEnd_toStartOf="@+id/etC3"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/etC1"
-            app:layout_constraintTop_toTopOf="@+id/etC1" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:text="OTP Verification"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_25ssp" />
 
-        <EditText
-            android:id="@+id/etC3"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="3dp"
-            android:background="@drawable/border"
-            android:ems="1"
-            android:gravity="center"
-            android:inputType="phone"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/etC1"
-            app:layout_constraintEnd_toStartOf="@+id/etC4"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/etC2"
-            app:layout_constraintTop_toTopOf="@+id/etC1" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvInstruction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:fontFamily="@font/dm_sans_medium"
+                        android:text="Enter the 6-digit code sent to"
+                        android:textColor="@color/ink_800"
+                        android:textSize="@dimen/_12ssp" />
 
-        <EditText
-            android:id="@+id/etC4"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="3dp"
-            android:background="@drawable/border"
-            android:ems="1"
-            android:gravity="center"
-            android:inputType="phone"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/etC1"
-            app:layout_constraintEnd_toStartOf="@+id/etC5"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/etC3"
-            app:layout_constraintTop_toTopOf="@+id/etC1" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMaskedNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:gravity="center"
+                        android:text="+91 •••• 1457"
+                        android:textColor="@color/ink_900"
+                        android:textSize="@dimen/_14ssp" />
 
-        <EditText
-            android:id="@+id/etC5"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="3dp"
-            android:background="@drawable/border"
-            android:ems="1"
-            android:gravity="center"
-            android:inputType="phone"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/etC1"
-            app:layout_constraintEnd_toStartOf="@+id/etC6"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/etC4"
-            app:layout_constraintTop_toTopOf="@+id/etC1" />
+                    <!-- OTP boxes -->
+                    <LinearLayout
+                        android:id="@+id/otpRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/etC6"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:background="@drawable/border"
-            android:ems="1"
-            android:gravity="center"
-            android:inputType="phone"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/etC1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/etC5"
-            app:layout_constraintTop_toTopOf="@+id/etC1"
-            app:layout_constraintVertical_bias="0.0" />
+                        <!-- 6 one-digit boxes -->
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etC1"
+                            style="@style/OtpBox"
+                            android:nextFocusForward="@id/etC2" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/black"
-            android:text="Don't get the OTP?"
-            android:textSize="@dimen/_10ssp"
-            app:layout_constraintEnd_toStartOf="@+id/tvResendBtn"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etC6" />
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etC2"
+                            style="@style/OtpBox"
+                            android:nextFocusForward="@id/etC3" />
 
-        <TextView
-            android:id="@+id/tvResendBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="RESEND OTP"
-            android:textColor="#FF3838"
-            android:textStyle="bold"
-            android:textSize="@dimen/_10ssp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView7"
-            app:layout_constraintTop_toTopOf="@+id/textView7" />
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etC3"
+                            style="@style/OtpBox"
+                            android:nextFocusForward="@id/etC4" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnVerify"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:layout_marginBottom="50dp"
-            android:background="@drawable/button_background"
-            android:text="VERIFY"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"
-            android:imeOptions="actionDone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:layout_constraintVertical_bias="0.0" />
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etC4"
+                            style="@style/OtpBox"
+                            android:nextFocusForward="@id/etC5" />
 
-        <ProgressBar
-            android:id="@+id/progressBarVerify"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@+id/btnVerify"
-            app:layout_constraintEnd_toEndOf="@+id/btnVerify"
-            app:layout_constraintStart_toStartOf="@+id/btnVerify"
-            app:layout_constraintTop_toTopOf="@+id/btnVerify" />
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etC5"
+                            style="@style/OtpBox"
+                            android:nextFocusForward="@id/etC6" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etC6"
+                            style="@style/OtpBox"
+                            android:imeOptions="actionDone" />
+                    </LinearLayout>
 
-</ScrollView>
+                    <!-- Resend row -->
+                    <LinearLayout
+                        android:id="@+id/resendRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Didn’t receive the OTP?"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:textColor="@color/ink_700"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvResend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@drawable/ripple_capsule"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingStart="@dimen/_2sdp"
+                            android:paddingEnd="@dimen/_2sdp"
+                            android:text="RESEND"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:textAllCaps="true"
+                            android:textColor="@color/accent_red"
+                            android:textSize="@dimen/_12ssp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <!-- Verify button -->
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnVerify"
+                        android:layout_width="@dimen/_160sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/btn_primary"
+                        android:fontFamily="sans-serif-medium"
+                        android:imeOptions="actionDone"
+                        android:text="VERIFY"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/loading_process"
+            layout="@layout/circular_progressbar_layout" />
+    </FrameLayout>
+</layout>

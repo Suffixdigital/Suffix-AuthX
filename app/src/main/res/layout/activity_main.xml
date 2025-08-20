@@ -5,7 +5,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@drawable/bg_gradient"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingStart="@dimen/_25sdp"
@@ -18,9 +18,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_20sdp"
-            android:scaleX="2.5"
-            android:scaleY="2.5"
-            android:src="@mipmap/suffix_digital_icon" />
+            android:backgroundTint="@android:color/transparent"
+            android:scaleX="2.8"
+            android:scaleY="2.8"
+            android:src="@drawable/suffix_digital_icon_foreground" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
@@ -29,13 +30,23 @@
             android:fontFamily="@font/dm_sans_medium"
             android:gravity="center"
             android:text="@string/app_name"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_20ssp" />
+            android:textColor="#222222"
+            android:textSize="@dimen/_24ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_regular"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/lbl_sign_in_option"
+            android:textColor="#444444"
+            android:textSize="@dimen/_12ssp" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginBottom="@dimen/_15sdp"
             android:layout_weight="1"
             android:fadeScrollbars="true"
@@ -59,21 +70,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_google_button"
-
-                    android:backgroundTint="@color/fui_bgPhone"
+                    android:backgroundTint="#2AB7CA"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="@dimen/_12sdp">
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/_24sdp"
-                        android:layout_height="@dimen/_24sdp"
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
                         android:src="@drawable/ic_phone" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/lbl_sign_in_with_phone"
                         android:textColor="#FFFFFF"
                         android:textSize="@dimen/_14ssp" />
@@ -89,156 +99,177 @@
                     android:backgroundTint="@color/fui_bgEmail"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="@dimen/_12sdp">
+                    android:padding="@dimen/_10sdp">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/_24sdp"
-                        android:layout_height="@dimen/_24sdp"
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
                         android:src="@drawable/ic_mail_white" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/lbl_email_password_login"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_14ssp" />
                 </LinearLayout>
 
-                <!-- Sign in with Google -->
                 <LinearLayout
-                    android:id="@+id/btn_google"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_15sdp"
-                    android:background="@drawable/bg_google_button"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/_12sdp">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/_24sdp"
-                        android:layout_height="@dimen/_24sdp"
-                        android:src="@drawable/ic_google" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_google"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_12sdp"
-                        android:text="@string/lbl_sign_in_with_google"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/_14ssp" />
-                </LinearLayout>
-
-                <!--<LinearLayout
-                    android:id="@+id/btn_facebook"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:background="@drawable/bg_google_button"
-                    android:backgroundTint="@color/fui_bgFacebook"
-                    android:gravity="center_vertical"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
-
-                    <com.facebook.login.widget.LoginButton
-                        android:id="@+id/button_facebook_login"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:minHeight="@dimen/_24sdp"
-                        android:minWidth="@dimen/_24sdp"
-                        android:height="@dimen/_24sdp"
-                        android:width="@dimen/_24sdp"
-                        android:layout_margin="@dimen/_12sdp"
-                        android:backgroundTint="@color/fui_bgFacebook"
-                        android:gravity="center"
-                        app:com_facebook_login_text="@string/lbl_sign_in_with_facebook"
-                        app:com_facebook_logout_text="@string/lbl_logout" />
-
-                </LinearLayout>-->
-
-                <!-- Sign in with Facebook -->
-                 <LinearLayout
-                     android:id="@+id/btn_facebook"
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:layout_marginTop="@dimen/_15sdp"
-                     android:background="@drawable/bg_google_button"
-                     android:backgroundTint="@color/fui_bgFacebook"
-                     android:gravity="center_vertical"
-                     android:orientation="horizontal"
-                     android:padding="@dimen/_12sdp">
-
-                     <androidx.appcompat.widget.AppCompatImageView
-                         android:layout_width="@dimen/_24sdp"
-                         android:layout_height="@dimen/_24sdp"
-                         android:src="@drawable/ic_facebook" />
-
-                     <androidx.appcompat.widget.AppCompatTextView
-                         android:id="@+id/txt_facebook"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_12sdp"
-                         android:text="@string/lbl_sign_in_with_facebook"
-                         android:textColor="#FFFFFF"
-                         android:textSize="@dimen/_14ssp" />
-                 </LinearLayout>
-
-
-                <!-- Twitter Login -->
-                <LinearLayout
-                    android:id="@+id/btn_twitter"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_15sdp"
-                    android:background="@drawable/bg_google_button"
-                    android:backgroundTint="@color/fui_bgTwitter"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/_12sdp">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/_24sdp"
-                        android:layout_height="@dimen/_24sdp"
-                        android:src="@drawable/ic_twitter_bird" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="#666666" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_twitter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_12sdp"
-                        android:text="@string/lbl_sign_in_with_twitter"
-                        android:textColor="@color/white"
+                        android:fontFamily="@font/dm_sans_regular"
+                        android:gravity="center"
+                        android:text="or sign in with"
+                        android:textColor="#666666"
                         android:textSize="@dimen/_14ssp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="#666666" />
+
                 </LinearLayout>
 
-                <!-- Github Login -->
                 <LinearLayout
-                    android:id="@+id/btn_github"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_15sdp"
-                    android:background="@drawable/bg_google_button"
-                    android:backgroundTint="@color/fui_bgGitHub"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/_12sdp">
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="@dimen/_24sdp"
-                        android:layout_height="@dimen/_24sdp"
-                        android:src="@drawable/ic_github_white" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_github"
-                        android:layout_width="wrap_content"
+                    <!-- Sign in with Google -->
+                    <LinearLayout
+                        android:id="@+id/btn_google"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_12sdp"
-                        android:text="@string/lbl_sign_in_with_github"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_14ssp" />
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_google_button"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/ic_google" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_google"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:text="@string/lbl_sign_in_with_google"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+
+                    <!-- Sign in with Facebook -->
+                    <LinearLayout
+                        android:id="@+id/btn_facebook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/bg_google_button"
+                        android:backgroundTint="@color/fui_bgFacebook"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/ic_facebook" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_facebook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:text="@string/lbl_sign_in_with_facebook"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Twitter Login -->
+                    <LinearLayout
+                        android:id="@+id/btn_twitter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_google_button"
+                        android:backgroundTint="@color/fui_bgTwitter"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/ic_twitter_bird" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_twitter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:text="@string/lbl_sign_in_with_twitter"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
+
+                    <!-- Github Login -->
+                    <LinearLayout
+                        android:id="@+id/btn_github"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/bg_google_button"
+                        android:backgroundTint="@color/fui_bgGitHub"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:src="@drawable/ic_github_white" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_github"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:text="@string/lbl_sign_in_with_github"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14ssp" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <!-- Yahoo Login -->
@@ -246,6 +277,7 @@
                     android:id="@+id/btn_yahoo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:background="@drawable/bg_google_button"
                     android:backgroundTint="@color/fui_bgYahoo"
@@ -322,10 +354,23 @@
                         android:textSize="@dimen/_14ssp" />
                 </LinearLayout>
 
+
+
             </LinearLayout>
 
 
         </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Need help? · Privacy Policy"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/dm_sans_medium"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_30sdp" />
 
 
     </LinearLayout>

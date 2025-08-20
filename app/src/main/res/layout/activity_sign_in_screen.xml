@@ -11,7 +11,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
+            android:background="@drawable/bg_gradient"
             android:overScrollMode="never"
             android:scrollbarStyle="insideOverlay"
             android:scrollbars="vertical">
@@ -25,28 +25,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:scaleX="2.5"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:scaleY="2.5"
-                    android:src="@mipmap/suffix_digital_icon" />
-
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:fontFamily="@font/dm_sans_medium"
-                    android:layout_gravity="center"
-                    android:text="Login"
-                    android:textColor="@color/light_blue"
-                    android:textSize="@dimen/_25ssp"
-                    android:textStyle="bold" />
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleX="2.8"
+                    android:scaleY="2.8"
+                    android:src="@drawable/suffix_digital_icon_foreground" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:backgroundTint="@color/white"
                     app:cardCornerRadius="@dimen/_10sdp"
@@ -62,6 +51,16 @@
                         android:paddingEnd="@dimen/_10sdp"
                         android:paddingBottom="@dimen/_15sdp">
 
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:fontFamily="@font/dm_sans_medium"
+                            android:text="Login"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/_25ssp"
+                            android:textStyle="bold" />
 
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -141,7 +140,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:text="@string/btn_forgot_password"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="match_parent"

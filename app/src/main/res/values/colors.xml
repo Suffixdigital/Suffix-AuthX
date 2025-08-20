@@ -12,8 +12,8 @@
     <color name="fui_bgFacebook">#3B5998</color>
     <color name="fui_bgTwitter">#FF5BAAF4</color>
     <color name="fui_bgGitHub">#24292E</color>
-    <color name="fui_bgEmail">#D0021B</color>
-    <color name="fui_bgPhone">#43C5A5</color>
+    <color name="fui_bgEmail">#CCD0021B</color>
+    <color name="fui_bgPhone">#AA43C5A5</color>
     <color name="fui_bgAnonymous">#f4b400</color>
     <color name="fui_bgMicrosoft">#2F2F2F</color>
     <color name="fui_bgYahoo">#720E9E</color>
@@ -26,6 +26,30 @@
     <color name="red_DC2828">#FFDC2828</color>
     <color name="light_black">#262626</color>
     <color name="light_gray">#A9B4B9</color>
+
+    <!-- Brand / Gradient -->
+    <!--<color name="grad_start">#A18CD1</color>   &lt;!&ndash; soft purple &ndash;&gt;
+    <color name="grad_center">#D8B4E2</color> &lt;!&ndash; lavender &ndash;&gt;
+    <color name="grad_end">#FBC2EB</color>    &lt;!&ndash; soft pink &ndash;&gt;-->
+    <color name="grad_start">#667eea</color>   <!-- soft purple -->
+    <color name="grad_center">#D8B4E2</color> <!-- lavender -->
+    <color name="grad_end">#764ba2</color>    <!-- soft pink -->
+
+    <!-- Text / Ink -->
+    <color name="ink_900">#101828</color>
+    <color name="ink_800">#1F2937</color>
+    <color name="ink_700">#344054</color>
+
+    <!-- Accents -->
+    <color name="accent_primary">#2AB7CA</color>  <!-- teal (buttons / focus) -->
+    <color name="accent_green">#4CAF50</color>
+    <color name="accent_red">#FF3B30</color>
+
+    <!-- Surfaces -->
+    <color name="surface_white">#FFFFFFFF</color>
+    <color name="surface_soft">#F5F6FA</color>
+    <color name="outline_soft">#D1D5DB</color>
+    <color name="outline_focus">#1976D2</color>
 
 
 </resources>

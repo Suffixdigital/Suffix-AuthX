@@ -149,7 +149,7 @@ class ForgotPasswordScreen : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View?) {
         when (view?.id){
             R.id.btn_reset_password -> {
-
+                viewModel.sendPasswordResetEmail(binding.etEmailId.text.toString())
             }
 
             R.id.btn_login ->{

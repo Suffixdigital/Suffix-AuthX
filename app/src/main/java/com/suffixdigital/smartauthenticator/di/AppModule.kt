@@ -1,8 +1,8 @@
 package com.suffixdigital.smartauthenticator.di
 
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.auth.auth
 import com.suffixdigital.smartauthenticator.data.repository.AuthRepositoryImpl
 import com.suffixdigital.smartauthenticator.domain.repository.AuthRepository
 import dagger.Module
