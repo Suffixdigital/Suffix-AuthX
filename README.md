@@ -122,4 +122,4 @@ MIT License
 
 ## Contact
 
-[Suffix Digital] - [suffixdifital@gmail.com]
+[Suffix Digital] - [suffixdigital@gmail.com]
