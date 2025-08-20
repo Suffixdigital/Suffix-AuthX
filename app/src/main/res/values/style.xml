@@ -69,4 +69,17 @@
         <!--<item name="android:scrollbarTrackVertical">@drawable/scrollbar_track_layout</item>-->
         <item name="android:fastScrollEnabled">true</item>
     </style>
+
+    <style name="OtpBox">
+        <item name="android:layout_width">@dimen/_35sdp</item>
+        <item name="android:layout_height">@dimen/_35sdp</item>
+        <item name="android:layout_margin">@dimen/_3sdp</item>
+        <item name="android:background">@drawable/otp_box_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:textColor">@color/ink_900</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:imeOptions">flagNoExtractUi</item>
+    </style>
 </resources>

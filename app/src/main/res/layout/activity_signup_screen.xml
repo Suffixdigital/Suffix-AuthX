@@ -142,7 +142,7 @@
             style="@style/recycler_view_scrolling_style"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white">
+            android:background="@drawable/bg_gradient">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -153,30 +153,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:scaleX="2.5"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:scaleY="2.5"
-                    android:src="@mipmap/suffix_digital_icon" />
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleX="2.8"
+                    android:scaleY="2.8"
+                    android:src="@drawable/suffix_digital_icon_foreground" />
 
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:fontFamily="@font/dm_sans_medium"
-                    android:layout_gravity="center"
-                    android:text="Registration"
-                    android:textColor="@color/light_blue"
-                    android:textSize="@dimen/_25ssp"
-                    android:textStyle="bold" />
+
 
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_10sdp"
                     android:backgroundTint="@color/white"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_2sdp"
@@ -191,6 +181,16 @@
                         android:paddingEnd="@dimen/_10sdp"
                         android:paddingBottom="@dimen/_15sdp">
 
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:fontFamily="@font/dm_sans_bold"
+                            android:layout_gravity="center"
+                            android:text="Registration"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/_25ssp"
+                            />
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/til_email_id"

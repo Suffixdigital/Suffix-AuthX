@@ -11,9 +11,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            android:gravity="center"
             android:layout_gravity="center"
+            android:background="@drawable/bg_gradient"
+            android:gravity="center"
             android:orientation="vertical"
             tools:context=".ui.HomeScreen">
 
@@ -38,7 +38,7 @@
                     android:layout_height="1dp"
                     android:layout_weight="0.2" />
 
-                <com.google.android.material.button.MaterialButton
+                <!--<com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_sign_out"
                     style="@style/MaterialButtonStyle"
                     android:layout_width="0dp"
@@ -48,23 +48,56 @@
                     android:enabled="true"
                     android:text="Sign Out"
                     android:textColor="@color/white"
+                    android:visibility="visible" />-->
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_sign_out"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_primary"
+                    android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="actionDone"
+                    android:text="Sign Out"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
                     android:visibility="gone" />
+
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
                     android:layout_weight="0.4" />
 
-                <com.google.android.material.button.MaterialButton
+                <!-- <com.google.android.material.button.MaterialButton
+                     android:id="@+id/btn_delete_user"
+                     style="@style/MaterialButtonStyle"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:backgroundTint="@color/light_blue"
+                     android:enabled="true"
+                     android:text="Delete User"
+                     android:textColor="@color/white"
+                     android:visibility="visible" />-->
+
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_delete_user"
-                    style="@style/MaterialButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/light_blue"
+                    android:background="@drawable/btn_primary"
                     android:enabled="true"
+                    android:fontFamily="sans-serif-medium"
+                    android:imeOptions="actionDone"
                     android:text="Delete User"
+                    android:textAllCaps="false"
                     android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
                     android:visibility="gone" />
 
                 <View

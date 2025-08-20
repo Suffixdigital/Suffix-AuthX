@@ -2,6 +2,7 @@
     <string name="app_name">Smart Authenticator</string>
 
     <string name="lbl_sign_in_with_phone">Sign in with Phone</string>
+    <string name="lbl_sign_in_option">Secure your digital world effortlessly.</string>
 
     <string name="btn_login">Log In</string>
     <string name="lbl_login"><u>Log In</u></string>
@@ -56,18 +57,19 @@
     <string name="twitter_consumer_key">exWbVvtL6qEOrCSJoICbDvitF</string>
     <string name="twitter_consumer_secret">sQkRcYnBZDi3ln5WBnUjEwXdgM7GQarWNxgVzrmKNCo8yfmH6G</string>
     <string name="lbl_email_password_login">Email - Password Login</string>
-    <string name="lbl_sign_in_with_google">Sign in with Google</string>
-    <string name="lbl_sign_in_with_facebook">Sign in with Facebook</string>
-    <string name="lbl_sign_in_with_twitter">Sign in with Twitter</string>
-    <string name="lbl_sign_in_with_github">Sign in with Github</string>
+    <string name="lbl_sign_in_with_google">Google</string>
+    <string name="lbl_sign_in_with_facebook">Facebook</string>
+    <string name="lbl_sign_in_with_twitter">Twitter</string>
+    <string name="lbl_sign_in_with_github">Github</string>
     <string name="lbl_sign_in_with_yahoo">Sign in with Yahoo</string>
     <string name="lbl_sign_in_with_microsoft">Sign in with Microsoft</string>
     <string name="lbl_sign_in_with_anonymous">Sign in with Anonymous</string>
-    <string name="lbl_otp_send_instruction">We will send otp to your entered mobile number.</string>
+    <string name="lbl_otp_send_instruction">We sent a code to your mobile number</string>
     <string name="btn_send">SEND</string>
     <string name="lbl_logged_out_successfully">Logged out successfully</string>
     <string name="lbl_logout">Logout</string>
     <string name="lbl_welcome_user">Welcome, %1$s</string>
+    <string name="back">Back</string>
 
 
 </resources>

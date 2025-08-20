@@ -3,10 +3,12 @@ package com.suffixdigital.smartauthenticator.core
 import android.content.Context
 import android.text.InputFilter
 import android.util.Log
+import android.view.View
 import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
 import java.util.regex.Pattern
 
-const val TAG = "AppTag"
+const val TAG = "OTP_Verification"
 const val EMPTY_STRING = ""
 
 fun logErrorMessage(
@@ -87,3 +89,5 @@ fun trimPhoneNumber(phoneNumber: String): String {
 fun isPasswordPatternValid(password: String): Boolean {
     return passwordRegex.matcher(password).matches()
 }
+
+

@@ -17,5 +17,6 @@ class MyApplication: Application() {
         FacebookSdk.setIsDebugEnabled(true)
         FacebookSdk.setAdvertiserIDCollectionEnabled(true)
         FacebookSdk.addLoggingBehavior(LoggingBehavior.INCLUDE_ACCESS_TOKENS)
+
     }
 }
