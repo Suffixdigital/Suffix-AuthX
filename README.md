@@ -1,73 +1,76 @@
+# Smart Authenticator – Android (Kotlin + Firebase)
 
-# 🔐 Smart Authenticator – Android (Kotlin + Firebase)
-
-A powerful and modular **multi-provider authentication app** built using Android’s **MVVM architecture** and **Firebase Authentication**. Ideal for apps requiring secure login with Email/Password, Google, Facebook, Twitter, and OTP verification.
+A modular and production-ready **multi-provider authentication boilerplate** for Android.  
+Built with **MVVM architecture** and **Firebase Authentication**, supporting secure login via Email/Password, Phone (OTP), Google, Facebook, and Twitter.
 
 ---
 
-## 🏷 GitHub Badges
+## Project Badges
 
-![Platform](https://img.shields.io/badge/platform-android-green.svg)
-![Language](https://img.shields.io/badge/language-kotlin-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Android-green.svg)
+![Language](https://img.shields.io/badge/language-Kotlin-blue.svg)
 ![License](https://img.shields.io/github/license/Suffixdigital/Smart-Authenticator)
 ![Stars](https://img.shields.io/github/stars/Suffixdigital/Smart-Authenticator?style=social)
 
 ---
 
-## 📱 App Overview
+## Overview
 
-Smart Authenticator provides a ready-to-use **authentication boilerplate** for Android apps. It ensures:
-- Fast and secure user login/signup
-- Reusable codebase with clean separation of concerns
-- Integration with most-used third-party auth providers
+Smart Authenticator is designed to help Android developers integrate authentication flows faster.  
+It provides a **clean MVVM-based structure**, **pre-configured Firebase integration**, and **common third-party login providers** out-of-the-box.
 
----
-
-## ✨ Key Features
-
-| Category         | Feature                                                                 |
-|------------------|-------------------------------------------------------------------------|
-| ✅ Authentication | Email/Password, Phone (OTP), Google, Facebook, Twitter                 |
-| 🔄 Session Handling | Firebase Auth state listeners to auto-login/auto-logout              |
-| 📐 Architecture   | Clean MVVM (Model-View-ViewModel)                                      |
-| 🔗 Deep Links     | Handles social sign-in redirects properly                              |
-| 🧪 Validation     | Realtime input validation using `TextWatcher`                          |
-| 🌐 Network        | Internet connectivity checks with error fallback                       |
-| 🌙 UI Support     | Dark & Light mode                                                      |
-| 🔐 Secure Logout  | Sign out across all linked providers (Firebase, Google, etc.)          |
-| 📊 Analytics Ready| Easily pluggable with Firebase Analytics (optional)                   |
+**Use cases:**
+- Apps needing quick integration of user authentication
+- Projects requiring scalable and reusable auth modules
+- Prototyping or production-ready implementations with Firebase
 
 ---
 
-## 🧰 Tech Stack
+## Features
 
-- **Language**: Kotlin
-- **Architecture**: MVVM + LiveData + ViewModel
-- **Firebase Services**:
-  - Authentication (Email, OTP, OAuth)
-- **Third-Party SDKs**:
+| Category              | Feature Description                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------|
+| Authentication        | Email/Password, Phone (OTP), Google, Facebook, Twitter                              |
+| Session Handling      | Firebase Auth state listeners with auto-login and auto-logout support               |
+| Architecture          | Clean MVVM pattern with ViewModels, LiveData, and Repositories                      |
+| Deep Links            | Handles social login redirects and intent handling                                  |
+| Input Validation      | Realtime validation with `TextWatcher`                                              |
+| Network Management    | Internet connectivity checks with fallback handling                                 |
+| UI                    | Material Design components, Dark & Light mode support                               |
+| Secure Logout         | Sign out from Firebase and all linked providers                                     |
+| Analytics Ready       | Easily extendable with Firebase Analytics                                           |
+
+---
+
+## Tech Stack
+
+- **Language:** Kotlin
+- **Architecture:** MVVM (Model–View–ViewModel) + LiveData
+- **Firebase Services:**
+  - Authentication (Email, Phone, OAuth)
+- **Third-Party SDKs:**
   - Google Sign-In
   - Facebook SDK
   - Twitter Kit
-- **UI**:
+- **UI:**
   - Material Components
   - ConstraintLayout
   - Dark Mode Support
 
 ---
 
-## 🧑‍💻 Developer Guide
+## Getting Started
 
-### 🔧 Prerequisites
+### Prerequisites
 
 - Android Studio Giraffe or newer
-- Firebase project with enabled Auth providers
+- Firebase project with Auth providers enabled
 - OAuth credentials from:
   - Google Cloud Console
   - Facebook Developer Portal
   - Twitter Developer Platform
 
-### 🔑 Setup Instructions
+### Setup Instructions
 
 ```bash
 git clone https://github.com/Suffixdigital/Smart-Authenticator.git
@@ -76,11 +79,11 @@ cd Smart-Authenticator
 
 1. Add your `google-services.json` to `app/`
 2. Add Facebook & Twitter keys in `strings.xml`
-3. Sync Gradle and Run!
+3. Sync Gradle and Run
 
 ---
 
-## 🔍 Project Structure
+## Project Structure
 
 ```
 com.suffixdigital.smartauthenticator/
@@ -93,33 +96,34 @@ com.suffixdigital.smartauthenticator/
 
 ---
 
-## 🖼 Screenshots
+## Screenshots
 
-| Main Screen                                 | Phone Number Screen                         | OTP Verification Screen                     | Email-Password Login Screen                 |
-|---------------------------------------------|---------------------------------------------|---------------------------------------------|---------------------------------------------|
-| ![Main Screen](screenshots/main_screen.png)| ![Phone](screenshots/phone_number_screen.png)| ![OTP](screenshots/otp_screen.png)| ![Login](screenshots/login_screen.png)|
+| Main Screen | Phone Number | OTP Verification | Email/Password Login |
+|-------------|--------------|------------------|-----------------------|
+| ![Main](screenshots/main_screen.png) | ![Phone](screenshots/phone_number_screen.png) | ![OTP](screenshots/otp_screen.png) | ![Login](screenshots/login_screen.png) |
 
-
-
-| Registration Screen                         | Forgot Password Screen                      | Facebook Login Screen                       | Facebook Login Success Screen               |
-|---------------------------------------------|---------------------------------------------|---------------------------------------------|---------------------------------------------|
-| ![Registration](screenshots/registration_screen.png)| ![Forgot Password](screenshots/forgot_password.png)| ![Facebook Login](screenshots/facebook_login_screen.png)| ![Facebook Login Success](screenshots/facebook_login_success.png)|
+| Registration | Forgot Password | Facebook Login | Facebook Success |
+|--------------|----------------|----------------|------------------|
+| ![Reg](screenshots/registration_screen.png) | ![Forgot](screenshots/forgot_password.png) | ![FB Login](screenshots/facebook_login_screen.png) | ![FB Success](screenshots/facebook_login_success.png) |
 
 ---
 
-## 🧪 Testing
+## Testing Checklist
 
-- ✅ Manual login/signup with all methods
-- 🔄 Auto session resume
-- ⚠️ Network disconnection test
-- ❌ Incorrect credentials feedback
+- [x] Manual login/signup with all providers
+- [x] Auto session resume after app restart
+- [x] Network disconnection handling
+- [x] Incorrect credentials feedback
 
 ---
 
-## 📄 License
+## License
 
-MIT License
+This project is licensed under the [MIT License](LICENSE).
+
+---
 
 ## Contact
 
-[Suffix Digital] - [suffixdigital@gmail.com]
+**Suffix Digital**  
+📧 suffixdigital@gmail.com
