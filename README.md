@@ -1,11 +1,11 @@
 
-# 🔐 Smart Authenticator – Android (Kotlin + Firebase)
+# Smart Authenticator – Android (Kotlin + Firebase)
 
 A powerful and modular **multi-provider authentication app** built using Android’s **MVVM architecture** and **Firebase Authentication**. Ideal for apps requiring secure login with Email/Password, Google, Facebook, Twitter, and OTP verification.
 
 ---
 
-## 🏷 GitHub Badges
+## GitHub Badges
 
 ![Platform](https://img.shields.io/badge/platform-android-green.svg)
 ![Language](https://img.shields.io/badge/language-kotlin-blue.svg)
@@ -14,7 +14,7 @@ A powerful and modular **multi-provider authentication app** built using Android
 
 ---
 
-## 📱 App Overview
+## App Overview
 
 Smart Authenticator provides a ready-to-use **authentication boilerplate** for Android apps. It ensures:
 - Fast and secure user login/signup
@@ -23,23 +23,23 @@ Smart Authenticator provides a ready-to-use **authentication boilerplate** for A
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 | Category         | Feature                                                                 |
 |------------------|-------------------------------------------------------------------------|
-| ✅ Authentication | Email/Password, Phone (OTP), Google, Facebook, Twitter                 |
-| 🔄 Session Handling | Firebase Auth state listeners to auto-login/auto-logout              |
-| 📐 Architecture   | Clean MVVM (Model-View-ViewModel)                                      |
-| 🔗 Deep Links     | Handles social sign-in redirects properly                              |
-| 🧪 Validation     | Realtime input validation using `TextWatcher`                          |
-| 🌐 Network        | Internet connectivity checks with error fallback                       |
-| 🌙 UI Support     | Dark & Light mode                                                      |
-| 🔐 Secure Logout  | Sign out across all linked providers (Firebase, Google, etc.)          |
-| 📊 Analytics Ready| Easily pluggable with Firebase Analytics (optional)                   |
+| Authentication | Email/Password, Phone (OTP), Google, Facebook, Twitter                 |
+| Session Handling | Firebase Auth state listeners to auto-login/auto-logout              |
+| Architecture   | Clean MVVM (Model-View-ViewModel)                                      |
+| Deep Links     | Handles social sign-in redirects properly                              |
+| Validation     | Realtime input validation using `TextWatcher`                          |
+| Network        | Internet connectivity checks with error fallback                       |
+| UI Support     | Dark & Light mode                                                      |
+| Secure Logout  | Sign out across all linked providers (Firebase, Google, etc.)          |
+| Analytics Ready| Easily pluggable with Firebase Analytics (optional)                    |
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Language**: Kotlin
 - **Architecture**: MVVM + LiveData + ViewModel
@@ -56,9 +56,9 @@ Smart Authenticator provides a ready-to-use **authentication boilerplate** for A
 
 ---
 
-## 🧑‍💻 Developer Guide
+## Developer Guide
 
-### 🔧 Prerequisites
+### Prerequisites
 
 - Android Studio Giraffe or newer
 - Firebase project with enabled Auth providers
@@ -67,7 +67,7 @@ Smart Authenticator provides a ready-to-use **authentication boilerplate** for A
   - Facebook Developer Portal
   - Twitter Developer Platform
 
-### 🔑 Setup Instructions
+### Setup Instructions
 
 ```bash
 git clone https://github.com/Suffixdigital/Smart-Authenticator.git
@@ -80,7 +80,7 @@ cd Smart-Authenticator
 
 ---
 
-## 🔍 Project Structure
+## Project Structure
 
 ```
 com.suffixdigital.smartauthenticator/
@@ -93,29 +93,29 @@ com.suffixdigital.smartauthenticator/
 
 ---
 
-## 🖼 Screenshots
+## Screenshots
 
-### 📱 Login Screen
+### Login Screen
 ![Login](https://raw.githubusercontent.com/Suffixdigital/Smart-Authenticator/main/screenshots/login_screen.png)
 
-### 🔐 OTP Verification
+### OTP Verification
 ![OTP](https://raw.githubusercontent.com/Suffixdigital/Smart-Authenticator/main/screenshots/otp_screen.png)
 
-### 🙍‍♂️ User Profile
+### User Profile
 ![Profile](https://raw.githubusercontent.com/Suffixdigital/Smart-Authenticator/main/screenshots/profile_screen.png)
 
 ---
 
-## 🧪 Testing
+## Testing
 
-- ✅ Manual login/signup with all methods
-- 🔄 Auto session resume
-- ⚠️ Network disconnection test
-- ❌ Incorrect credentials feedback
+- Manual login/signup with all methods
+- Auto session resume
+- Network disconnection test
+- Incorrect credentials feedback
 
 ---
 
-## 📄 License
+## License
 
 MIT License
 
