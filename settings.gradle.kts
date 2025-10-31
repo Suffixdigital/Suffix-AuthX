@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Smart Authenticator"
+rootProject.name = "Suffix AuthX"
 include(":app")
  
