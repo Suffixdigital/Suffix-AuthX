@@ -7,38 +7,30 @@ import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import com.google.android.gms.auth.api.phone.SmsRetriever
-import com.google.firebase.FirebaseException
+import androidx.lifecycle.lifecycleScope
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.PhoneAuthCredential
-import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import com.suffixdigital.smartauthenticator.core.TAG
 import com.suffixdigital.smartauthenticator.databinding.ActivityOtpSendBinding
 import com.suffixdigital.smartauthenticator.utils.AppSignatureHelper
-import java.util.concurrent.TimeUnit
+import com.suffixdigital.smartauthenticator.viewmodels.OTPViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class OtpSendActivity : AppCompatActivity() {
 
+    private val viewModel: OTPViewModel by viewModels()
     // ViewBinding to access views in the layout
     private lateinit var binding: ActivityOtpSendBinding
-
-    // Firebase Authentication instance
-    private lateinit var mAuth: FirebaseAuth
-
-    // Callback for phone authentication
-    private lateinit var mCallbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityOtpSendBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Initialize FirebaseAuth instance
-        mAuth = FirebaseAuth.getInstance()
-
         val appSignatureHelper = AppSignatureHelper(this)
         val appHashes = appSignatureHelper.getAppSignatures()
         Log.d(TAG, "App hash for SMS: $appHashes")
@@ -55,86 +47,26 @@ class OtpSendActivity : AppCompatActivity() {
                 }
                 else -> {
                     hideKeyboard()
-                    sendOtp(phoneNumber)
+                    viewModel.sendOtp(phoneNumber, this)
                 }
             }
         }
-    }
 
+        lifecycleScope.launch {
+            viewModel.uiState.collectLatest { state ->
+                binding.loadingProcess.progressCircular.visibility = if (state.loading) View.VISIBLE else View.GONE
+//                tvStatus.text = state.message ?: ""
 
-    private fun sendOtp(phone: String) {
-        val options = PhoneAuthOptions.newBuilder(mAuth)
-            .setPhoneNumber("+91$phone")
-            .setTimeout(60L, TimeUnit.SECONDS)
-            .setActivity(this)
-            .setCallbacks(object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
-                override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-                    // ✅ Auto-verification succeeded (instant or SMS auto-retrieval)
-
-                    val smsCode = credential.smsCode
-                    if (smsCode != null) {
-                        // Firebase auto-read success
-                        goToOtpVerify(phone, credential.provider, smsCode)
-                        Toast.makeText(this@OtpSendActivity, "onVerificationCompleted smsCode: ${credential.smsCode}", Toast.LENGTH_SHORT).show()
-
-                    } else {
-                        // Instant verification (no code needed)
-                       // signInWithCredential(credential)
-                    }
-                }
-
-                override fun onCodeSent(verificationId: String, token: PhoneAuthProvider.ForceResendingToken) {
-                    super.onCodeSent(verificationId, token)
-                    //this@OtpSendActivity.verificationId = verificationId
-
-                    // Start SMS Retriever API as fallback
-                    startSmsRetriever()
-
-                    goToOtpVerify(phone, verificationId, null)
-                }
-
-                override fun onVerificationFailed(e: FirebaseException) {
-                    Toast.makeText(this@OtpSendActivity, "Verification failed: ${e.message}", Toast.LENGTH_SHORT).show()
-                }
-            }).build()
-
-        PhoneAuthProvider.verifyPhoneNumber(options)
-    }
-
-    private fun goToOtpVerify(phone: String, verificationId: String?, autoOtp: String?) {
-        val intent = Intent(this, OtpVerifyActivity::class.java).apply {
-            putExtra("phone", phone)
-            putExtra("verificationId", verificationId)
-            autoOtp?.let { putExtra("autoOtp", it) }
-        }
-        startActivity(intent)
-    }
-
-
-    private fun startSmsRetriever() {
-        val client = SmsRetriever.getClient(this)
-        val task = client.startSmsRetriever()
-        task.addOnSuccessListener {
-            Log.d(TAG, "SMS Retriever started")
-        }
-        task.addOnFailureListener {
-            Log.e(TAG, "Failed to start SMS Retriever", it)
-        }
-    }
-
-
-    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-        mAuth.signInWithCredential(credential)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    Log.d("OTP", "signInWithCredential:success")
-                    // Navigate to home/dashboard
-                } else {
-                    Log.w("OTP", "signInWithCredential:failure", task.exception)
-                    Toast.makeText(this, "Verification failed", Toast.LENGTH_SHORT).show()
+                if (state.verificationId != null) {
+                    Toast.makeText(this@OtpSendActivity, state.message, Toast.LENGTH_LONG).show()
+                    val phoneNumber = binding.etPhone.text.toString().trim()
+                    val intent = Intent(this@OtpSendActivity, OtpVerifyActivity::class.java)
+                    intent.putExtra("phone", phoneNumber)
+                    intent.putExtra("verificationId", state.verificationId)
+                    startActivity(intent)
                 }
             }
+        }
     }
 
     private fun hideKeyboard() {
@@ -142,6 +74,4 @@ class OtpSendActivity : AppCompatActivity() {
         val view = currentFocus ?: View(this)
         imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
-
-
 }

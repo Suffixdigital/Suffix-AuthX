@@ -58,11 +58,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "776521156581-ifvgfcfj9hikk1oabsh9rnmsjpldagv4.apps.googleusercontent.com",
+          "client_id": "776521156581-klr7dad3lbt5nq4o5emqhjm3m4kl8lea.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.suffixdigital.smartauthenticator",
-            "certificate_hash": "ac964ce01f1be72e9a7ccd67ebe7cfa7392b75ce"
+            "certificate_hash": "4037e482807554bfa0104a55c799d0c27dae84df"
           }
         },
         {

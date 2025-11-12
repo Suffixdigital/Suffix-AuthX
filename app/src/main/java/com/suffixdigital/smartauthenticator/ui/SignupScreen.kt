@@ -263,7 +263,7 @@ class SignupScreen : AppCompatActivity(), View.OnClickListener {
             binding.btnSignup.setBackgroundColor(
                 ContextCompat.getColor(
                     this@SignupScreen,
-                    R.color.light_blue
+                    R.color.accent_green
                 )
             )
         }
@@ -330,15 +330,6 @@ class SignupScreen : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setupViews() {
-        // Observe state
-        lifecycleScope.launchWhenStarted {
-            viewModel.email.collect { binding.etEmailId.setText(it) }
-        }
-
-        lifecycleScope.launchWhenStarted {
-            viewModel.password.collect { binding.etPassword.setText(it) }
-        }
-
         // Observe isLoading state
         lifecycleScope.launchWhenStarted {
             viewModel.isLoading.collect { isLoading ->

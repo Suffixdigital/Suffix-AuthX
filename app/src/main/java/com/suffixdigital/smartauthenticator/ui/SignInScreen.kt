@@ -102,7 +102,7 @@ class SignInScreen : AppCompatActivity(),View.OnClickListener {
                         binding.btnLogIn.isEnabled = true
                         binding.btnLogIn.alpha = 1.0f
                         binding.btnLogIn.setTextColor(ContextCompat.getColor(this@SignInScreen, R.color.white))
-                        binding.btnLogIn.setBackgroundColor(ContextCompat.getColor(this@SignInScreen, R.color.light_blue))
+                        binding.btnLogIn.setBackgroundColor(ContextCompat.getColor(this@SignInScreen, R.color.accent_green))
                     }
                 }
             }
@@ -158,7 +158,7 @@ class SignInScreen : AppCompatActivity(),View.OnClickListener {
                         binding.btnLogIn.isEnabled = true
                         binding.btnLogIn.alpha = 1.0f
                         binding.btnLogIn.setTextColor(ContextCompat.getColor(this@SignInScreen, R.color.white))
-                        binding.btnLogIn.setBackgroundColor(ContextCompat.getColor(this@SignInScreen, R.color.light_blue))
+                        binding.btnLogIn.setBackgroundColor(ContextCompat.getColor(this@SignInScreen, R.color.accent_green))
                     }
                 }
             }
@@ -190,13 +190,13 @@ class SignInScreen : AppCompatActivity(),View.OnClickListener {
 
     private fun setupViews(){
         // Observe state
-        lifecycleScope.launchWhenStarted {
+        /*lifecycleScope.launchWhenStarted {
             viewModel.email.collect { binding.etEmailId.setText(it) }
         }
 
         lifecycleScope.launchWhenStarted {
             viewModel.password.collect { binding.etPassword.setText(it) }
-        }
+        }*/
 
         lifecycleScope.launchWhenStarted {
             viewModel.signInState.collect { response ->

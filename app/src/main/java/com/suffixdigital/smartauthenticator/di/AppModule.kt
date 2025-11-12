@@ -14,8 +14,8 @@ import dagger.hilt.android.scopes.ViewModelScoped
 @Module
 @InstallIn(ViewModelComponent::class)
 class AppModule {
-    @Provides
-    fun provideFirebaseAuth() = Firebase.auth
+    /*@Provides
+    fun provideFirebaseAuth() = Firebase.auth*/
 
     @Provides
     @ViewModelScoped

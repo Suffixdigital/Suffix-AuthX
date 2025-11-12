@@ -78,7 +78,7 @@ class ForgotPasswordScreen : AppCompatActivity(), View.OnClickListener {
                     binding.btnResetPassword.isEnabled = true
                     binding.btnResetPassword.alpha = 1.0f
                     binding.btnResetPassword.setTextColor(ContextCompat.getColor(this@ForgotPasswordScreen, R.color.white))
-                    binding.btnResetPassword.setBackgroundColor(ContextCompat.getColor(this@ForgotPasswordScreen, R.color.light_blue))
+                    binding.btnResetPassword.setBackgroundColor(ContextCompat.getColor(this@ForgotPasswordScreen, R.color.accent_green))
                 }
             }
         }

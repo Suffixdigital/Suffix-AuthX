@@ -23,13 +23,13 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_110sdp"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:backgroundTint="@android:color/transparent"
-                    android:scaleX="2.8"
-                    android:scaleY="2.8"
-                    android:src="@drawable/suffix_digital_icon_foreground" />
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:src="@drawable/suffix_authx_icon" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
@@ -37,7 +37,9 @@
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#000b3f"
+                    app:strokeWidth="@dimen/_1sdp"
+                    app:strokeColor="@color/white"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_2sdp"
                     app:cardUseCompatPadding="true">
@@ -58,7 +60,7 @@
                             android:layout_marginBottom="@dimen/_20sdp"
                             android:fontFamily="@font/dm_sans_medium"
                             android:text="Login"
-                            android:textColor="@color/light_blue"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_25ssp"
                             android:textStyle="bold" />
 
@@ -67,6 +69,7 @@
                             android:id="@+id/til_email_id"
                             style="@style/TextInputLayout.FilledBox.Padding"
                             android:hint="@string/lbl_email"
+
                             android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
                             app:boxStrokeColor="@color/box_stroke_color"
                             app:errorTextAppearance="@style/TextInputLayout_Error"
@@ -77,7 +80,7 @@
                                 android:id="@+id/et_email_id"
                                 style="@style/Login_TextInputEditText"
                                 android:drawableStart="@drawable/sms"
-                                android:drawableTint="@color/light_blue"
+                                android:drawableTint="@color/white"
                                 android:imeOptions="flagNoExtractUi|actionNext"
                                 android:inputType="textEmailAddress" />
 
@@ -93,14 +96,14 @@
                             app:errorTextAppearance="@style/TextInputLayout_Error"
                             app:hintTextAppearance="@style/TextInputLayout_Hint"
                             app:passwordToggleEnabled="true"
-                            app:passwordToggleTint="@color/light_blue"
+                            app:passwordToggleTint="@color/white"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/et_password"
                                 style="@style/Login_TextInputEditText"
                                 android:drawableStart="@drawable/lock"
-                                android:drawableTint="@color/light_blue"
+                                android:drawableTint="@color/white"
                                 android:imeOptions="flagNoExtractUi|actionDone"
                                 android:inputType="textPassword" />
 
@@ -112,6 +115,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/_20sdp"
+                            android:imeOptions="actionDone"
+                            app:backgroundTint="@color/accent_green"
                             android:enabled="false"
                             android:text="@string/btn_login" />
 

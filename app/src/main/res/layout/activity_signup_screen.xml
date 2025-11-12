@@ -3,136 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-   <!-- <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main_header"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/image_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/shape"
-            app:layout_constraintBaseline_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_130sdp"
-            android:text="REGISTRATION"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_25ssp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/ed1"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:layout_marginEnd="@dimen/_25sdp"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"
-            android:paddingLeft="@dimen/_10sdp"
-            android:background="@drawable/input_style"
-            android:hint="Enter FullName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text1" />
-
-        <EditText
-            android:id="@+id/ed2"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:layout_marginEnd="@dimen/_25sdp"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"
-            android:paddingLeft="@dimen/_10sdp"
-            android:background="@drawable/input_style"
-            android:hint="Enter Email"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ed1" />
-
-        <EditText
-            android:id="@+id/ed3"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:layout_marginEnd="@dimen/_25sdp"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"
-            android:paddingEnd="@dimen/_10sdp"
-            android:paddingStart="@dimen/_10sdp"
-            android:background="@drawable/input_style"
-            android:drawableRight="@drawable/ic_baseline_visibility_24"
-            android:hint="Enter Passowrd"
-            android:inputType="textPassword"
-            android:longClickable="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ed2" />
-
-        <Button
-            android:id="@+id/btn_rigis"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_30sdp"
-            android:backgroundTint="@color/teal_200"
-            android:gravity="center"
-            android:text="Register"
-            android:textSize="@dimen/_16ssp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ed3" />
-
-        <TextView
-            android:id="@+id/t1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints" />
-
-        <LinearLayout
-            android:id="@+id/lin1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_rigis">
-
-            <TextView
-                android:id="@+id/txt3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Already Registered? "
-                android:textColor="@color/teal_200"
-                android:textSize="@dimen/_10ssp" />
-
-            <TextView
-                android:id="@+id/login_link"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Click here"
-                android:textColor="@color/teal_200"
-                android:textSize="@dimen/_10ssp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -151,23 +21,21 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_110sdp"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:backgroundTint="@android:color/transparent"
-                    android:scaleX="2.8"
-                    android:scaleY="2.8"
-                    android:src="@drawable/suffix_digital_icon_foreground" />
-
-
-
-
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:src="@drawable/suffix_authx_icon" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_10sdp"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#000b3f"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="@dimen/_1sdp"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="@dimen/_2sdp"
                     app:cardUseCompatPadding="true">
@@ -188,7 +56,7 @@
                             android:fontFamily="@font/dm_sans_bold"
                             android:layout_gravity="center"
                             android:text="Registration"
-                            android:textColor="@color/light_blue"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_25ssp"
                             />
 
@@ -206,7 +74,7 @@
                                 android:id="@+id/et_email_id"
                                 style="@style/Login_TextInputEditText"
                                 android:drawableStart="@drawable/sms"
-                                android:drawableTint="@color/light_blue"
+                                android:drawableTint="@color/white"
                                 android:imeOptions="flagNoExtractUi|actionNext"
                                 android:inputType="textEmailAddress" />
 
@@ -221,14 +89,14 @@
                             app:errorTextAppearance="@style/TextInputLayout_Error"
                             app:hintTextAppearance="@style/TextInputLayout_Hint"
                             app:passwordToggleEnabled="true"
-                            app:passwordToggleTint="@color/light_blue"
+                            app:passwordToggleTint="@color/white"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/et_password"
                                 style="@style/Login_TextInputEditText"
                                 android:drawableStart="@drawable/lock"
-                                android:drawableTint="@color/light_blue"
+                                android:drawableTint="@color/white"
                                 android:hint="@string/lbl_password"
                                 android:imeOptions="flagNoExtractUi|actionNext"
                                 android:inputType="textPassword" />
@@ -244,14 +112,14 @@
                             app:errorTextAppearance="@style/TextInputLayout_Error"
                             app:hintTextAppearance="@style/TextInputLayout_Hint"
                             app:passwordToggleEnabled="true"
-                            app:passwordToggleTint="@color/light_blue"
+                            app:passwordToggleTint="@color/white"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/et_verify_password"
                                 style="@style/Login_TextInputEditText"
                                 android:drawableStart="@drawable/lock"
-                                android:drawableTint="@color/light_blue"
+                                android:drawableTint="@color/white"
                                 android:hint="@string/lbl_verify_password"
                                 android:imeOptions="flagNoExtractUi|actionDone"
                                 android:inputType="textPassword" />
@@ -264,6 +132,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:enabled="false"
+                            android:imeOptions="actionDone"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            app:backgroundTint="@color/accent_green"
                             android:text="@string/btn_signup" />
 
                         <LinearLayout
@@ -278,7 +149,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Already Registered? "
-                                android:textColor="@color/light_blue"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_12ssp" />
 
                             <TextView
@@ -286,7 +157,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Click here"
-                                android:textColor="@color/light_blue"
+                                android:textColor="@color/white"
                                 android:textSize="@dimen/_12ssp"
                                 android:textStyle="bold" />
                         </LinearLayout>

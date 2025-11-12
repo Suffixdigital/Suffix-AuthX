@@ -18,9 +18,9 @@
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="false"
-        android:icon="@mipmap/suffix_digital_icon"
+        android:icon="@mipmap/suffix_authx_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/suffix_digital_icon_round"
+        android:roundIcon="@mipmap/suffix_authx_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartAuthenticator"
         tools:targetApi="31">

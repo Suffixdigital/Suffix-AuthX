@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Smart Authenticator</string>
+    <string name="app_name">Suffix AuthX</string>
 
     <string name="lbl_sign_in_with_phone">Sign in with Phone</string>
     <string name="lbl_sign_in_option">Secure your digital world effortlessly.</string>
@@ -70,6 +70,9 @@
     <string name="lbl_logout">Logout</string>
     <string name="lbl_welcome_user">Welcome, %1$s</string>
     <string name="back">Back</string>
+    <string name="lbl_phone_number">Phone Number</string>
+    <string name="_91">+91</string>
+    <string name="lbl_send">Send</string>
 
 
 </resources>

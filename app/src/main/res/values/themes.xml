@@ -16,13 +16,13 @@
 
 
     <style name="ThemeOverlay.AppTheme.TextInputEditText.Outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorPrimary">@color/white</item>
         //Activated color
-        <item name="colorOnSurface">@color/light_blue</item>
+        <item name="colorOnSurface">@color/white</item>
         //Normal color
         <item name="colorError">@color/red_DC2828</item>
         //Error color
-        <item name="colorControlActivated">@color/light_blue</item>
+        <item name="colorControlActivated">@color/white</item>
 
     </style>
 </resources>

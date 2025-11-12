@@ -31,9 +31,9 @@
     <!--<color name="grad_start">#A18CD1</color>   &lt;!&ndash; soft purple &ndash;&gt;
     <color name="grad_center">#D8B4E2</color> &lt;!&ndash; lavender &ndash;&gt;
     <color name="grad_end">#FBC2EB</color>    &lt;!&ndash; soft pink &ndash;&gt;-->
-    <color name="grad_start">#667eea</color>   <!-- soft purple -->
-    <color name="grad_center">#D8B4E2</color> <!-- lavender -->
-    <color name="grad_end">#764ba2</color>    <!-- soft pink -->
+    <color name="grad_start">#000b3f</color>   <!-- soft purple -->
+    <color name="grad_center">#000b3f</color> <!-- lavender -->
+    <color name="grad_end">#000b3f</color>    <!-- soft pink -->
 
     <!-- Text / Ink -->
     <color name="ink_900">#101828</color>
@@ -46,10 +46,10 @@
     <color name="accent_red">#FF3B30</color>
 
     <!-- Surfaces -->
-    <color name="surface_white">#FFFFFFFF</color>
-    <color name="surface_soft">#F5F6FA</color>
-    <color name="outline_soft">#D1D5DB</color>
-    <color name="outline_focus">#1976D2</color>
+    <color name="surface_white">#FF000b3f</color>
+    <color name="surface_soft">#FF000b3f</color>
+    <color name="outline_soft">#FFFFFFFF</color>
+    <color name="outline_focus">#FFFFFFFF</color>
 
 
 </resources>

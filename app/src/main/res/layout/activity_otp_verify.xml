@@ -6,169 +6,192 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bg_gradient"
-            android:orientation="vertical">
+            android:overScrollMode="never"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="vertical">
 
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:backgroundTint="@android:color/transparent"
-                android:scaleX="2.8"
-                android:scaleY="2.8"
-                android:src="@drawable/suffix_digital_icon_foreground" />
-
-            <com.google.android.material.card.MaterialCardView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:backgroundTint="@color/white"
-                app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="@dimen/_2sdp"
-                app:cardUseCompatPadding="true">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <LinearLayout
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:src="@drawable/suffix_authx_icon" />
+
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_20sdp"
-                    android:layout_marginBottom="@dimen/_20sdp"
-                    android:orientation="vertical"
-                    android:paddingBottom="@dimen/_15sdp">
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:backgroundTint="#000b3f"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:cardUseCompatPadding="true"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="@dimen/_1sdp">
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:text="OTP Verification"
-                        android:textColor="@color/light_blue"
-                        android:textSize="@dimen/_25ssp" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tvInstruction"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:gravity="center"
-                        android:fontFamily="@font/dm_sans_medium"
-                        android:text="Enter the 6-digit code sent to"
-                        android:textColor="@color/ink_800"
-                        android:textSize="@dimen/_12ssp" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tvMaskedNumber"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:gravity="center"
-                        android:text="+91 •••• 1457"
-                        android:textColor="@color/ink_900"
-                        android:textSize="@dimen/_14ssp" />
-
-                    <!-- OTP boxes -->
                     <LinearLayout
-                        android:id="@+id/otpRow"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_20sdp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <!-- 6 one-digit boxes -->
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/etC1"
-                            style="@style/OtpBox"
-                            android:nextFocusForward="@id/etC2" />
-
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/etC2"
-                            style="@style/OtpBox"
-                            android:nextFocusForward="@id/etC3" />
-
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/etC3"
-                            style="@style/OtpBox"
-                            android:nextFocusForward="@id/etC4" />
-
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/etC4"
-                            style="@style/OtpBox"
-                            android:nextFocusForward="@id/etC5" />
-
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/etC5"
-                            style="@style/OtpBox"
-                            android:nextFocusForward="@id/etC6" />
-
-                        <androidx.appcompat.widget.AppCompatEditText
-                            android:id="@+id/etC6"
-                            style="@style/OtpBox"
-                            android:imeOptions="actionDone" />
-                    </LinearLayout>
-
-                    <!-- Resend row -->
-                    <LinearLayout
-                        android:id="@+id/resendRow"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:orientation="vertical">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Didn’t receive the OTP?"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/dm_sans_bold"
+                            android:text="OTP Verification"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_25ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvInstruction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
                             android:fontFamily="@font/dm_sans_medium"
-                            android:textColor="@color/ink_700"
+                            android:gravity="center"
+                            android:text="Enter the 6-digit code sent to"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_12ssp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/tvResend"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvMaskedNumber"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_5sdp"
-                            android:background="@drawable/ripple_capsule"
-                            android:clickable="true"
-                            android:focusable="true"
-                            android:paddingStart="@dimen/_2sdp"
-                            android:paddingEnd="@dimen/_2sdp"
-                            android:text="RESEND"
-                            android:fontFamily="@font/dm_sans_medium"
-                            android:textAllCaps="true"
-                            android:textColor="@color/accent_red"
-                            android:textSize="@dimen/_12ssp"
-                            />
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/dm_sans_bold"
+                            android:gravity="center"
+                            android:text="+91 •••• 1457"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14ssp" />
 
+                        <!-- OTP boxes -->
+                        <LinearLayout
+                            android:id="@+id/otpRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <!-- 6 one-digit boxes -->
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etC1"
+                                style="@style/OtpBox"
+                                android:nextFocusForward="@id/etC2" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etC2"
+                                style="@style/OtpBox"
+                                android:nextFocusForward="@id/etC3" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etC3"
+                                style="@style/OtpBox"
+                                android:nextFocusForward="@id/etC4" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etC4"
+                                style="@style/OtpBox"
+                                android:nextFocusForward="@id/etC5" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etC5"
+                                style="@style/OtpBox"
+                                android:nextFocusForward="@id/etC6" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etC6"
+                                style="@style/OtpBox"
+                                android:imeOptions="actionDone" />
+                        </LinearLayout>
+
+                        <!-- Hidden field that actually collects OTP -->
+                        <EditText
+                            android:id="@+id/etHidden"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:alpha="0"
+                            android:inputType="number"
+                            android:importantForAutofill="yes"
+                            android:autofillHints="smsOTP"
+                            android:maxLength="6"
+                            android:digits="0123456789"
+                            android:visibility="invisible"/>
+
+                        <!-- Resend row -->
+                        <LinearLayout
+                            android:id="@+id/resendRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:text="Didn’t receive the OTP?"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvResend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:background="@drawable/ripple_capsule"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:fontFamily="@font/dm_sans_medium"
+                                android:paddingStart="@dimen/_2sdp"
+                                android:paddingEnd="@dimen/_2sdp"
+                                android:text="RESEND"
+                                android:textAllCaps="true"
+                                android:textColor="@color/accent_red"
+                                android:textSize="@dimen/_12ssp" />
+
+
+                        </LinearLayout>
+
+                        <!-- Verify button -->
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnVerify"
+                            android:layout_width="@dimen/_160sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:background="@drawable/btn_primary"
+                            android:fontFamily="sans-serif-medium"
+                            android:imeOptions="actionDone"
+                            android:text="VERIFY"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp" />
 
                     </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Verify button -->
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btnVerify"
-                        android:layout_width="@dimen/_160sdp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/_20sdp"
-                        android:background="@drawable/btn_primary"
-                        android:fontFamily="sans-serif-medium"
-                        android:imeOptions="actionDone"
-                        android:text="VERIFY"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
 
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-        </LinearLayout>
+        </ScrollView>
 
         <include
             android:id="@+id/loading_process"
