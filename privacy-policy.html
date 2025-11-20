@@ -1,24 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Privacy Policy - Suffix AuthX</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy - Your App Name</title>
+
+<style>
+    body {
+        font-family: "Segoe UI", Roboto, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f8f9fb;
+        color: #333;
+    }
+    header {
+        background: #4a6cf7;
+        color: white;
+        padding: 20px 30px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .container {
+        max-width: 900px;
+        margin: 20px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    .tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .tab {
+        padding: 10px 20px;
+        background: #e6e9f2;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    .tab.active {
+        background: #4a6cf7;
+        color: white;
+    }
+    .section { display: none; }
+    .section.active { display: block; }
+    h2 { margin-top: 25px; }
+    footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        color: #777;
+    }
+</style>
 </head>
+
 <body>
-<h2>Privacy Policy for Suffix AuthX</h2>
+<header>Privacy Policy</header>
 
-<p>Suffix AuthX is a developer tool used to test Firebase Authentication. 
-The app only handles basic login information provided by Firebase such as user name, email, and profile picture. 
-We do not store, sell, share, or collect any user data on our servers. 
-All authentication operations are processed directly by Google Firebase.</p>
+<div class="container">
+    <!-- LANGUAGE TABS -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchLang('en')">English</div>
+        <div class="tab" onclick="switchLang('hi')">हिन्दी</div>
+        <div class="tab" onclick="switchLang('gu')">ગુજરાતી</div>
+    </div>
 
-<h3>Data Handling:</h3>
-<ul>
-  <li>Information is only displayed inside the app after login.</li>
-  <li>No data is transferred to any external server other than Firebase.</li>
-  <li>No analytics, ads, or tracking services are used.</li>
-  <li>User can logout anytime and no data is retained.</li>
-</ul>
+    <!-- ENGLISH -->
+    <div id="en" class="section active">
+        <h2>Privacy Policy</h2>
+        <p>Your App Name ("we", "our", or "us") operates the mobile application ("App").  
+        This page informs you of our policies regarding the collection, use, and disclosure
+        of personal data when you use our App.</p>
 
-<p>If you have questions, contact: support@suffixdigital.com</p>
+        <h3>1. Information We Collect</h3>
+        <ul>
+            <li>Account Information (email, phone number, name)</li>
+            <li>Device Information (model, OS version)</li>
+            <li>Usage Data (pages viewed, clicks, interactions)</li>
+            <li>Location (only if you explicitly allow)</li>
+        </ul>
+
+        <h3>2. How We Use Your Information</h3>
+        <ul>
+            <li>To create and manage your user account</li>
+            <li>To improve app performance and user experience</li>
+            <li>To provide customer support</li>
+            <li>To send important updates</li>
+        </ul>
+
+        <h3>3. Third-Party Services Used</h3>
+        <ul>
+            <li>Google Play Services</li>
+            <li>Firebase Analytics</li>
+            <li>Firebase Authentication (Phone/Email/OTP Logins)</li>
+            <li>Crashlytics</li>
+        </ul>
+
+        <h3>4. Data Security</h3>
+        <p>Your data is encrypted and processed securely.</p>
+
+        <h3>5. Your Rights</h3>
+        <ul>
+            <li>Access your data</li>
+            <li>Request deletion</li>
+            <li>Withdraw permissions anytime</li>
+        </ul>
+
+        <h3>6. Contact Us</h3>
+        <p>If you have any questions about this Privacy Policy, contact us at:<br>
+        <b>youremail@example.com</b></p>
+    </div>
+
+    <!-- HINDI -->
+    <div id="hi" class="section">
+        <h2>गोपनीयता नीति</h2>
+        <p>Your App Name ("हम") इस मोबाइल ऐप ("ऐप") का संचालन करता है।  
+        यह पृष्ठ बताता है कि हम कौन-सा डेटा एकत्र करते हैं और उसका उपयोग कैसे करते हैं।</p>
+
+        <h3>1. हम कौन-सी जानकारी एकत्र करते हैं</h3>
+        <ul>
+            <li>खाता जानकारी (ईमेल, फोन नंबर, नाम)</li>
+            <li>डिवाइस जानकारी</li>
+            <li>उपयोग डेटा</li>
+            <li>स्थान जानकारी (यदि अनुमति दी जाए)</li>
+        </ul>
+
+        <h3>2. जानकारी का उपयोग</h3>
+        <ul>
+            <li>यूज़र अकाउंट प्रबंधन</li>
+            <li>ऐप प्रदर्शन सुधार</li>
+            <li>कस्टमर सपोर्ट</li>
+            <li>महत्वपूर्ण अपडेट भेजना</li>
+        </ul>
+
+        <h3>3. थर्ड-पार्टी सेवाएँ</h3>
+        <ul>
+            <li>Google Play Services</li>
+            <li>Firebase Analytics</li>
+            <li>Firebase Authentication</li>
+            <li>Crashlytics</li>
+        </ul>
+
+        <h3>4. डेटा सुरक्षा</h3>
+        <p>आपका डेटा सुरक्षित रूप से संग्रहीत और एन्क्रिप्ट किया जाता है।</p>
+
+        <h3>5. आपके अधिकार</h3>
+        <ul>
+            <li>अपने डेटा को एक्सेस करें</li>
+            <li>डेटा हटाने का अनुरोध करें</li>
+            <li>अनुमतियाँ वापस लें</li>
+        </ul>
+
+        <h3>6. संपर्क करें</h3>
+        <p>गोपनीयता नीति से संबंधित प्रश्नों के लिए:<br>
+        <b>youremail@example.com</b></p>
+    </div>
+
+    <!-- GUJARATI -->
+    <div id="gu" class="section">
+        <h2>ગોપનીયતા નીતિ</h2>
+        <p>Your App Name ("અમે") આ મોબાઇલ એપ ("એપ") ચલાવીએ છીએ.  
+        આ પેજ જણાવે છે કે અમે કયો ડેટા એકત્ર કરીએ છીએ અને તેનો ઉપયોગ કેવી રીતે કરીએ છીએ.</p>
+
+        <h3>1. અમે કયો ડેટા એકત્ર કરીએ છીએ</h3>
+        <ul>
+            <li>એકાઉન્ટ માહિતી (ઇમેલ, ફોન નંબર, નામ)</li>
+            <li>ડિવાઇસ માહિતી</li>
+            <li>ઉપયોગ ડેટા</li>
+            <li>સ્થાન માહિતી (પરવાનગી હોય તો)</li>
+        </ul>
+
+        <h3>2. માહિતીનો ઉપયોગ</h3>
+        <ul>
+            <li>યુઝર એકાઉન્ટ મેનેજમેન્ટ</li>
+            <li>એપ પરફોર્મન્સ સુધારવું</li>
+            <li>કસ્ટમર સપોર્ટ</li>
+            <li>મહત્વપૂર્ણ અપડેટ મોકલવા</li>
+        </ul>
+
+        <h3>3. તૃતીય-પક્ષ સેવાઓ</h3>
+        <ul>
+            <li>Google Play Services</li>
+            <li>Firebase Analytics</li>
+            <li>Firebase Authentication</li>
+            <li>Crashlytics</li>
+        </ul>
+
+        <h3>4. ડેટા સુરક્ષા</h3>
+        <p>તમારો ડેટા સુરક્ષિત રીતે સંગ્રહિત અને એનક્રિપ્ટ થાય છે.</p>
+
+        <h3>5. તમારા અધિકારો</h3>
+        <ul>
+            <li>તમારો ડેટા જુઓ</li>
+            <li>ડેટા ડિલીટ રીક્વેસ્ટ કરો</li>
+            <li>પરવાનગીઓ પાછી ખેંચો</li>
+        </ul>
+
+        <h3>6. સંપર્ક કરો</h3>
+        <p>કોઈ પ્રશ્ન હોય તો:<br>
+        <b>youremail@example.com</b></p>
+    </div>
+</div>
+
+<footer>
+    © 2025 Your App Name. All rights reserved.
+</footer>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+
+    document.querySelector(`.tab[onclick="switchLang('${lang}')"]`).classList.add('active');
+    document.getElementById(lang).classList.add('active');
+}
+</script>
+
 </body>
 </html>
